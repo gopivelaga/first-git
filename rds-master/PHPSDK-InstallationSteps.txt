@@ -1,0 +1,24 @@
+1.Create RDS DB Subnet Group and empty RDSSG
+
+2.Choose PrivateSubnets as 2 minimum subnets,each from Availabilty Zone
+
+3.Create an RDS instance
+
+4.Use MS SQL/Dev env
+
+5.Apply NO for Mutli AZ,use "mytestcloud" for all (Database,Username,hostname)
+
+6.Use created RDS DB subnetgroup
+
+7.Launch an EC2 instance with RDS -Bootstrap script
+
+8.Clone with http://github.com/vcloudmateguru/rds
+
+9.Copy the connect.php from GIT to html folder
+
+10.edit with hostname
+
+11.run with public ip/connect.php
+
+12.Allow Traffic to Flow in EC2 from SG of Webservers
+ 
