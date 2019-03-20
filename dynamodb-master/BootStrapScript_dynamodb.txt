@@ -1,0 +1,22 @@
+Link for Latest Code 
+http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/AppendixSampleDataCodePHP.html
+Create a Role for EC2 instance to acess DynamoDB Service( Full Access)
+Launch the Instance with this ROLE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DynmaoDB code-Amazon Linux Image
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#!bin/bash
+sudo su
+yum update –y
+yum install httpd24 php56 git -y
+service httpd start
+chkconfig httpd on
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Launch SSH Access to Instance
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sudo su
+cd /var/www/html
+curl -sS https://getcomposer.org/installer | php
+php composer.phar require aws/aws-sdk-php
+git clone https://github.com/vcloudmateguru/dynamodb
